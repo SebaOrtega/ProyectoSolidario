@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import "./styles/Login.css";
 
@@ -30,8 +30,6 @@ const Login = () => {
         id="password"
         onChange={(ev) => setPassword(ev.target.value)}
       />
-    
-        {/* <p className="soswachin"><Link>Has olvidado tu contraseña?</Link></p> */}
 
       <Button
         onClick={submit}
@@ -42,6 +40,12 @@ const Login = () => {
         INICIAR SESIÓN
       </Button>
 
+      <p>
+        <Link className="soswachin">Has olvidado tu contraseña?</Link>
+      </p>
+      <p>
+        <Link className="soswachin">No tenes una cuenta aún? Registrate!</Link>
+      </p>
     </div>
   );
 };

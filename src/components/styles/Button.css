@@ -1,76 +1,69 @@
-:root{
-    --primary: #fff;
-    
+:root {
+  --primary: #fff;
 }
 
-.btn{
-    padding: 10px 20px;
-    border-radius: 15px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+.btn {
+  padding: 10px 20px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
-.btn--primary{
-    background-color: rgb(240, 185, 11);
-    color: black;
-    border: 1PX solid rgb(240, 185, 11) ;
+.btn--primary {
+  background-color: rgb(240, 185, 11);
+  color: black;
+  border: 1px solid rgb(240, 185, 11);
 }
 
-.btn--outline{
-    background-color: white;
-    color: black;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
+.btn--outline {
+  background-color: white;
+  color: black;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
 }
 
-
-.btn--medium{
-    padding: 8px 20px;
-    font-size: 1.1rem;
-    margin-right: 20px;
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  margin-right: 20px;
 }
 
-.btn--large{
-    padding: 12px 26px;
-    font-size: 20px;
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
 }
 
-.btnToLogin{
-    background: black;
-    border:black;    
-    border-radius: 20px;
+.btnToLogin {
+  background: black;
+  border: black;
+  border-radius: 20px;
 
-    font-weight: lighter;
-    color:blanchedalmond;
-    font-size: 17px;
-
-
+  font-weight: lighter;
+  color: blanchedalmond;
+  font-size: 17px;
 }
 
-.btnSizeLogin{
-    width: 100%;
-    height: 40px;
-    margin-top: 15px;
+.btnSizeLogin {
+  width: 100%;
+  height: 40px;
 }
 
-
-.btnToLogin:hover{
-    color: whitesmoke;
-
+.btnToLogin:hover {
+  color: whitesmoke;
 }
 
-.btn--medium:hover{
-    border-width: initial;
-    border-color: rgb(240, 185, 11);
-    background: transparent;
-    color: white;
-    transition: all 0.3s ease-out;
+.btn--medium:hover {
+  border-width: initial;
+  border-color: rgb(240, 185, 11);
+  background: transparent;
+  color: white;
+  transition: all 0.3s ease-out;
 }
 
-.btn--large:hover{
-    border-width: 2px;
-    border-color: rgb(240, 185, 11);
-    transition: all 2s ease-out;
+.btn--large:hover {
+  border-width: 2px;
+  border-color: rgb(240, 185, 11);
+  transition: all 2s ease-out;
 }
