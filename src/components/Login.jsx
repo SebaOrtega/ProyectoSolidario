@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const submit = () => {
-    return console.log(email, password);
+    alert(`${email}, ${password}`);
   };
 
   return (
@@ -41,10 +41,10 @@ const Login = () => {
       </Button>
 
       <p>
-        <Link className="soswachin">Has olvidado tu contraseña?</Link>
+        <Link to='/' className="soswachin">Has olvidado tu contraseña?</Link>
       </p>
       <p>
-        <Link className="soswachin">No tenes una cuenta aún? Registrate!</Link>
+        <Link to='/Registro' className="soswachin">No tenes una cuenta aún? Registrate!</Link>
       </p>
     </div>
   );

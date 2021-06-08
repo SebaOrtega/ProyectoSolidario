@@ -1,10 +1,15 @@
+:root {
+  --bk: #151b26;
+}
+
 .form-container {
   top: 50%;
   left: 50%;
-  width: 320px;
+  width: 380px;
   height: 400px;
   position: absolute;
   background-color: blanchedalmond;
+  color: var(--bk);
   transform: translate(-50%, -50%);
   padding: 65px 35px;
   border-radius: 10px;
@@ -29,7 +34,7 @@ input {
 
   outline: none;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--bk);
   background: transparent;
 }
 
@@ -50,5 +55,5 @@ p {
 }
 
 .soswachin:hover {
-  color: black;
+  color: var(--bk);
 }

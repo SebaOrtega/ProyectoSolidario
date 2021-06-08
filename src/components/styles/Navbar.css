@@ -1,5 +1,8 @@
+:root{
+    --yellow: #F7DC0A;
+}
 .navbar {
-    background: #080808 ;
+    background: #151b26 ;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -30,7 +33,7 @@
 }
 
 .navbar-logo:hover {
-    color: rgb(240, 185, 11);
+    color: var(--yellow);
     transition: all 1s ease-out;
 
 }
@@ -58,7 +61,7 @@
 }
 
 .nav-links:hover {
-    border-bottom: 3px solid rgb(240, 185, 11);
+    border-bottom: 3px solid var(--yellow);
     transition: all 0.2s ease-out;
 }
 
@@ -82,7 +85,7 @@
 }
 
 .nav-menu {
-    border-bottom: 5px solid rgb(240, 185, 11);
+    border-bottom: 5px solid var(--yellow);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -94,7 +97,7 @@
 }
 
 .nav-menu.active {
-    background: #151515;
+    background: #3f404b;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -149,7 +152,7 @@
 .nav-links-mobile:hover {
     background: #fff;
     color: #242424;
-    border-bottom: 3px solid rgb(240, 185, 11);
+    border-bottom: 3px solid var(--yellow);
     transition: all 0.2s ease-out;
     }
 }
