@@ -2,8 +2,8 @@ import React from 'react';
 import './styles/Button.css'
 import { Link } from 'react-router-dom'
 
-const STYLES = ['btn--primary', 'btn--outline']
-const SIZES= ['btn--medium', 'btn--large']
+const STYLES = ['btn--primary', 'btn--outline', 'btnToLogin']
+const SIZES= ['btn--medium', 'btn--large', 'btnSizeLogin']
 
 export const Button = ({children, type, onClick, buttonStyle, buttonSize, linkTo}) => {
 

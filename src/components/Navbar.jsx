@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import './styles/Navbar.css';
+import React, { useState, useEffect } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import "./styles/Navbar.css";
 
-function Navbar() {
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -22,32 +22,30 @@ function Navbar() {
     showButton();
   }, []);
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener("resize", showButton);
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-
+      <nav className="navbar">
+        <div className="navbar-container">
           {/* Nombre de la Navbar */}
 
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             Proyecto Solidario
           </Link>
 
           {/* Barrita Responsive */}
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
             {/* Elementos de la Navbar */}
 
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/RegistroNegocio'
-                className='nav-links'
+                to="/RegistroNegocio"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Registrá tu negocio
@@ -56,8 +54,8 @@ function Navbar() {
 
             <li>
               <Link
-                to='/Login'
-                className='nav-links-mobile'
+                to="/Login"
+                className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
                 Iniciar Sesión
@@ -66,8 +64,8 @@ function Navbar() {
 
             <li>
               <Link
-                to='/Registro'
-                className='nav-links-mobile'
+                to="/Registro"
+                className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
                 Registrarse
@@ -77,13 +75,20 @@ function Navbar() {
 
           {/* Botones de la Navbar */}
 
-          {button && <Button linkTo="Login" buttonStyle='btn--outline'>INICIAR SESIÓN</Button>}
-          {button && <Button linkTo="Registro" buttonStyle='btn--outline'>REGISTRARSE</Button>}
-
+          {button && (
+            <Button linkTo="Login" buttonStyle="btn--outline">
+              INICIAR SESIÓN
+            </Button>
+          )}
+          {button && (
+            <Button linkTo="Registro" buttonStyle="btn--outline">
+              REGISTRARSE
+            </Button>
+          )}
         </div>
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;
