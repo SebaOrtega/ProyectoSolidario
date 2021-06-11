@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ showNav }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -17,7 +17,16 @@ const Navbar = () => {
       setButton(true);
     }
   };
+  
+  let location = useLocation();
+  if (location.pathname.includes("RegistroNegocio")) {
+    showNav(false);
+  } else{
+    showNav(true);
+  }
 
+console.log(location)
+  
   useEffect(() => {
     showButton();
   }, []);

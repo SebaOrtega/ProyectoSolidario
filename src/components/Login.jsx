@@ -12,7 +12,7 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="login-container form-type" >
       <h1>Iniciar Sesión</h1>
 
       <label htmlFor="email"> Correo Electrónico</label>

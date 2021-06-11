@@ -16,7 +16,7 @@ const Registro = () => {
   };
 
   return (
-    <div className="registro-container">
+    <div className="registro-container form-type">
       <h1>Registrarse</h1>
 
       <label htmlFor="nombre">Nombre</label>

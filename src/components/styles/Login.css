@@ -2,7 +2,7 @@
   --bk: #151b26;
 }
 
-.form-container {
+.login-container {
   top: 50%;
   left: 50%;
   width: 380px;
@@ -15,18 +15,18 @@
   border-radius: 10px;
 }
 
-h1 {
+.form-type  h1 {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
 }
 
-label {
+.form-type  label {
   font-weight: bold;
   display: block;
 }
 
-input {
+.form-type  input {
   width: 100%;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -38,22 +38,22 @@ input {
   background: transparent;
 }
 
-Button {
+.form-type  Button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-p {
+.form-type  p {
   text-align: center;
   font-size: 12px;
   margin-top: 10px;
 }
 
-.soswachin {
+.form-type  .soswachin {
   color: rgb(95, 95, 95);
   text-decoration: none;
 }
 
-.soswachin:hover {
+.form-type .soswachin:hover {
   color: var(--bk);
 }
