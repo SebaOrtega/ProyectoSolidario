@@ -11,15 +11,18 @@ const RegistroNegocio = () => {
 
   const [negocio, setNegocio] = useState();
   const [emailNegocio, setEmailNegocio] = useState();
-  const tipoNegocio = selectedDropdown
+  const tipoNegocio = selectedDropdown;
 
-  console.log(tipoNegocio, negocio, emailNegocio)
-
+  // console.log(tipoNegocio, negocio, emailNegocio);
 
   return (
     <div className="grid-container">
       <div className="derecha">
-        <button onClick={() => history.goBack()}>Back</button>
+        <button
+          className="fas fa-arrow-left botones-guia"
+          onClick={() => history.goBack()}
+          
+        ></button>
 
         <div className="registronegocio-container">
           <h1>Registro de tu negocio</h1>
@@ -52,7 +55,10 @@ const RegistroNegocio = () => {
         </div>
       </div>
 
-      <div className="izquierda"></div>
+      <div className="izquierda">
+        <button to="/Registro" className="fas fa-times botones-guia">
+        </button>
+      </div>
     </div>
   );
 };
