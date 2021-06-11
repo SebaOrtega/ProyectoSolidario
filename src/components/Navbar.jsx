@@ -24,8 +24,6 @@ const Navbar = ({ showNav }) => {
   } else{
     showNav(true);
   }
-
-console.log(location)
   
   useEffect(() => {
     showButton();
