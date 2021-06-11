@@ -1,27 +1,55 @@
-import React, { useState } from 'react'
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import "./App.css"
-import Login from './components/Login'
-import Navbar from './components/Navbar'
-import Registro from './components/Registro'
-import RegistroNegocio from './components/RegistroNegocio'
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar.jsx";
+import Registro from "./components/Registro";
+import RegistroNegocio from "./components/RegistroNegocio";
 
 const App = () => {
-  const [showNav, setShowNav] = useState( true )
-  return(
-    <Router>
-      {/* Si showNav es true renderiza <Navbar /> sino null (no muestra nada) */}
-      { showNav ? <Navbar showNav = {(state) => setShowNav(state)}/> : false} 
-      <Switch>
-        <Route path="/Login"> <Login/> </Route>
-        <Route path="/Registro"> <Registro/> </Route>
-        <Route path="/RegistroNegocio"> <RegistroNegocio/> </Route>
-      </Switch>
-    </Router>
-  )
-}
+	const [showNav, setShowNav] = useState(true);
 
+	const toggleNav = (options) => {
+		setShowNav(options);
+	};
 
+	//Hide or Show navbar
 
-export default App
-  
+	/* document.addEventListener("DOMContentLoaded", function (event) {
+		
+	}); */
+
+	const navbar = document.getElementById("navbar");
+
+	useEffect(() => {
+		if (!showNav) {
+			if (!navbar.classList.contains("navbar-hide")) {
+				navbar.classList.add("navbar-hide");
+			}
+		} else {
+			if (navbar.classList.contains("navbar-hide")) {
+				navbar.classList.remove("navbar-hide");
+			}
+		}
+	});
+
+	return (
+		<Router>
+			{/* Si showNav es true renderiza <Navbar /> sino null (no muestra nada) */}
+			<Navbar showNav={(state) => toggleNav(state)} />
+			<Switch>
+				<Route path="/Login">
+					<Login />
+				</Route>
+				<Route path="/Registro">
+					<Registro />
+				</Route>
+				<Route path="/RegistroNegocio">
+					<RegistroNegocio />
+				</Route>
+			</Switch>
+		</Router>
+	);
+};
+
+export default App;
