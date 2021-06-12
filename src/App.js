@@ -7,49 +7,48 @@ import Registro from "./components/Registro";
 import RegistroNegocio from "./components/RegistroNegocio";
 
 const App = () => {
-	const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(true);
 
-	const toggleNav = (options) => {
-		setShowNav(options);
-	};
+  const toggleNav = (options) => {
+    setShowNav(options);
+  };
 
-	//Hide or Show navbar
+  //Hide or Show navbar
 
-	/* document.addEventListener("DOMContentLoaded", function (event) {
+  /* document.addEventListener("DOMContentLoaded", function (event) {
 		
 	}); */
 
-	const navbar = document.getElementById("navbar");
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    if (!showNav) {
+      if (!navbar.classList.contains("navbar-hide")) {
+        navbar.classList.add("navbar-hide");
+      }
+    } else {
+      if (navbar.classList.contains("navbar-hide")) {
+        navbar.classList.remove("navbar-hide");
+      }
+    }
+  });
 
-	useEffect(() => {
-		if (!showNav) {
-			if (!navbar.classList.contains("navbar-hide")) {
-				navbar.classList.add("navbar-hide");
-			}
-		} else {
-			if (navbar.classList.contains("navbar-hide")) {
-				navbar.classList.remove("navbar-hide");
-			}
-		}
-	});
-
-	return (
-		<Router>
-			{/* Si showNav es true renderiza <Navbar /> sino null (no muestra nada) */}
-			<Navbar showNav={(state) => toggleNav(state)} />
-			<Switch>
-				<Route path="/Login">
-					<Login />
-				</Route>
-				<Route path="/Registro">
-					<Registro />
-				</Route>
-				<Route path="/RegistroNegocio">
-					<RegistroNegocio />
-				</Route>
-			</Switch>
-		</Router>
-	);
+  return (
+    <Router>
+      {/* Si showNav es true renderiza <Navbar /> sino null (no muestra nada) */}
+      <Navbar showNav={(state) => toggleNav(state)} />
+      <Switch>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route path="/Registro">
+          <Registro />
+        </Route>
+        <Route path="/RegistroNegocio">
+          <RegistroNegocio />
+        </Route>
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;
