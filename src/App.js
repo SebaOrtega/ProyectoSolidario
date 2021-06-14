@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar.jsx";
 import Registro from "./components/Registro";
@@ -37,6 +38,9 @@ const App = () => {
       {/* Si showNav es true renderiza <Navbar /> sino null (no muestra nada) */}
       <Navbar showNav={(state) => toggleNav(state)} />
       <Switch>
+      <Route exact path="/">
+          <Home />
+        </Route>
         <Route path="/Login">
           <Login />
         </Route>
