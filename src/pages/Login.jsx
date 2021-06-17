@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+import { Button } from "../components/Button";
 import "../styles/Login.css";
 
 const Login = () => {
+
+  /* En las variables email y password se almacenan los datos del login */
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

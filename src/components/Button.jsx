@@ -3,7 +3,7 @@ import "../styles/Button.css";
 import { Link } from "react-router-dom";
 
 const STYLES = ["btn--primary", "btn--outline", "btnToLogin", "btnToHome"];
-const SIZES = ["btn--medium", "btn--large", "btnSizeLogin", "btnSizeHome"];
+const SIZES = ["btnDefaultMedium", "btnDefaultLarge", "btnSizeLogin", "btnSizeHome"];
 
 export const Button = ({ children, type, onClick, buttonStyle, buttonSize, linkTo }) => {
 	const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];

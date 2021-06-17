@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import Dropdown from "./Dropdown";
-import { Button } from "./Button";
+import Dropdown from "../components/Dropdown";
+import { Button } from "../components/Button";
 import "../styles/Home.css";
 
 const Home = () => {
   const [selectedUbication, setSelectedUbication] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-
+  
   const barrios = ["Villa Urquiza", "Villa Crespo", "Chacarita", "Villa Urquiza", "Villa Crespo", "Chacarita", "Villa Urquiza", "Villa Crespo", "Chacarita"];
   const categorias = ["Verduleria", "Carniceria", "Tecnología"];
+
   return (
     <div className="home-container">
       <div className="alt-container">

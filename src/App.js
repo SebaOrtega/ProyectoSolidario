@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
-import Home from "./components/Home";
-import Login from "./components/Login";
+import "./styles/App.css";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar.jsx";
-import Registro from "./components/Registro";
-import RegistroNegocio from "./components/RegistroNegocio";
+import Registro from "./pages/Registro";
+import RegistroNegocio from "./pages/RegistroNegocio";
 
 const App = () => {
   const [showNav, setShowNav] = useState(true);
 
+
+  /* Oculta la navbar en las rutas que no tenga que estar */
   const toggleNav = (options) => {
     setShowNav(options);
   };
-
-  //Hide or Show navbar
-
-  /* document.addEventListener("DOMContentLoaded", function (event) {
-		
-	}); */
 
   useEffect(() => {
     const navbar = document.getElementById("navbar");
@@ -35,7 +31,6 @@ const App = () => {
 
   return (
     <Router>
-      {/* Si showNav es true renderiza <Navbar /> sino null (no muestra nada) */}
       <Navbar showNav={(state) => toggleNav(state)} />
       <Switch>
       <Route exact path="/">
